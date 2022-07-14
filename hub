@@ -4,9 +4,9 @@ end
 
 
 
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Razzer35/a/main/Razzer%20Hub%20Source"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/euronetic/euronet/source"))()
 
-local Pendulum = Library.CreateLib("69 hub ;)))")
+local Pendulum = Library.CreateLib("euronetic")
 local UserInputService = game:GetService("UserInputService")
 
 local ScriptsTab = Pendulum:NewTab("Scripts",false)
@@ -741,7 +741,7 @@ wait(0.2)
 end)
 -- Credits
 
-CreditsTab:NewLabel("Credits to godfather#0289 for making the entire hub")
+CreditsTab:NewLabel("Credits to lakh for making the entire hub")
 CreditsTab:NewLabel("Ty marner.szn_#1554 for reanimation")
 CreditsTab:NewLabel("UI was made by MotionTaken#3117")
 

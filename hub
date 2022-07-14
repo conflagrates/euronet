@@ -57,7 +57,7 @@ ScriptsTab:NewButton("Invisible (R6)", "May not work on certain executors", func
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/euronetic/euronet/main/scripts/r6%20invis"))()
 end)
 
-ScriptsTab:NewButton("FE Smallify", "Requires 90 height, 70 width, 100 head, 100 proportions", function()
+ScriptsTab:NewButton("FE Smallify", "90 height, 70 width, 100 head", function()
 	--[[simple script made by failedmite57926
 Character settings:
 Body Type - 0%

@@ -57,6 +57,10 @@ ScriptsTab:NewButton("Invisible (R6)", "May not work on certain executors", func
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/euronetic/euronet/main/scripts/r6%20invis"))()
 end)
 
+ScriptsTab:NewButton("Giant Legs (R15)", "Those are some nice calves!", function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/DigitalityScripts/roblox-scripts/main/Leg%20Resize'))()
+end)
+
 ScriptsTab:NewButton("FE Smallify", "90 height, 70 width, 100 head", function()
 	--[[simple script made by failedmite57926
 Character settings:

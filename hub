@@ -49,6 +49,14 @@ ScriptsTab:NewButton("Skateboard", "Working FE Skateboard, hat in discord", func
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Skateboard"))()
 end)
 
+ScriptsTab:NewButton("Invisible (R15)", "Works in major games such as GPO!", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/euronetic/euronet/main/scripts/r15%20invis"))()
+end)
+
+ScriptsTab:NewButton("Invisible (R6)", "May not work on certain executors", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/euronetic/euronet/main/scripts/r6%20invis"))()
+end)
+
 ScriptsTab:NewButton("FE Smallify", "Requires 90 height, 70 width, 100 head, 100 proportions", function()
 	--[[simple script made by failedmite57926
 Character settings:

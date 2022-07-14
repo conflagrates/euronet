@@ -41,7 +41,7 @@ ScriptsTab:NewButton("Soccer Ball", "Puts any 6 hats into a working soccer ball!
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Soccer%20Ball"))()
 end)
 
-ScriptsTab:NewButton("Human-Wheel", "Use if you want to be disabled", function()
+ScriptsTab:NewButton("Bowling Ball", "Use if you want to be disabled", function()
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Marble"))()
 end)
 

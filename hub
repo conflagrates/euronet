@@ -16,54 +16,6 @@ local Players = game:GetService("Players")
 
 -- Script Buttons
 
-ScriptsTab:NewButton("Fire God", "Requires Fiery Fox Shoulder Pal", function()
-	loadstring(game:HttpGetAsync("https://pastebin.com/raw/D7pigANg"))()
-end)
-
-ScriptsTab:NewButton("Amogus", "you are a ni-", function()
-	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/amogus"))()
-end)
-
-ScriptsTab:NewButton("Assault Rifle", "For military needs", function()
-	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/AR-15"))()
-end)
-
-ScriptsTab:NewButton("UFO", "Area 69 ;)", function()
-	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/UFO"))()
-end)
-
-ScriptsTab:NewButton("Creepy Crawler", "Spiderman?!?", function()
-	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Creepy%20Crawler"))()
-end)
-
-ScriptsTab:NewButton("R6 Kazotsky Kick", "R6 for ppl with a third leg", function()
-	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Kazotsky%20Kick"))()
-end)
-
-ScriptsTab:NewButton("R15 Kazotsky Kick", "R15 for ppl with a third leg", function()
-	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/R15%20Kazotsky%20Kick"))()
-end)
-
-ScriptsTab:NewButton("Gravity Gun", "Creds to MastersMZ", function()
-	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Gravity%20Gun"))()
-end)
-
-ScriptsTab:NewButton("Neck Snap", "For comedy purposes", function()
-	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Neck%20Snap"))()
-end)
-
-ScriptsTab:NewButton("Guts", "Flings on touch and on swing!", function()
-	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Guts"))()
-end)
-
-ScriptsTab:NewButton("Dog", "Pet dog that follows you around", function()
-	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Dog"))()
-end)
-
-ScriptsTab:NewButton("Pet Head", "Opens a GUI that allows you to use your head to follow and annoy people", function()
-	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Pet%20Head"))()
-end)
-
 ScriptsTab:NewButton("Big Head R15", "Makes your rthro head become gigantic", function()
 
 for i,v in pairs(game.Players.LocalPlayer.Character.Humanoid:GetChildren()) do
@@ -77,102 +29,8 @@ for i,v in pairs(game.Players.LocalPlayer.Character.Humanoid:GetChildren()) do
 end
 end)
 
-ScriptsTab:NewButton("Creeper", "FE Minecraft Creeper", function()
-	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Creeper"))()
-end)
-
-ScriptsTab:NewButton("Neko", "*notices your bulge*", function()
+ScriptsTab:NewButton("Neko", "*notices your bulgee-wulgee*", function()
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Neko"))()
-end)
-
-ScriptsTab:NewButton("Flip", "Z - Frontflip, X - Backflip, C - Infinite Jump", function()
-	
-	wait(2)
-
---[[ Info ]]--
-
-local ver = "2.00"
-local scriptname = "Flip"
-
-
---[[ Keybinds ]]--
-
-local FrontflipKey = Enum.KeyCode.Z
-local BackflipKey = Enum.KeyCode.X
-local AirjumpKey = Enum.KeyCode.C
-
-
---[[ Dependencies ]]--
-
-local ca = game:GetService("ContextActionService")
-local zeezy = game:GetService("Players").LocalPlayer
-local h = 0.0174533
-local antigrav
-
-
---[[ Functions ]]--
-
-function zeezyFrontflip(act,inp,obj)
-	if inp == Enum.UserInputState.Begin then
-		zeezy.Character.Humanoid:ChangeState("Jumping")
-		wait()
-		zeezy.Character.Humanoid.Sit = true
-		for i = 1,360 do 
-			delay(i/720,function()
-			zeezy.Character.Humanoid.Sit = true
-				zeezy.Character.HumanoidRootPart.CFrame = zeezy.Character.HumanoidRootPart.CFrame * CFrame.Angles(-h,0,0)
-			end)
-		end
-		wait(0.55)
-		zeezy.Character.Humanoid.Sit = false
-	end
-end
-
-function zeezyBackflip(act,inp,obj)
-	if inp == Enum.UserInputState.Begin then
-		zeezy.Character.Humanoid:ChangeState("Jumping")
-		wait()
-		zeezy.Character.Humanoid.Sit = true
-		for i = 1,360 do
-			delay(i/720,function()
-			zeezy.Character.Humanoid.Sit = true
-				zeezy.Character.HumanoidRootPart.CFrame = zeezy.Character.HumanoidRootPart.CFrame * CFrame.Angles(h,0,0)
-			end)
-		end
-		wait(0.55)
-		zeezy.Character.Humanoid.Sit = false
-	end
-end
-
-function zeezyAirjump(act,inp,obj)
-	if inp == Enum.UserInputState.Begin then
-		zeezy.Character:FindFirstChildOfClass'Humanoid':ChangeState("Seated")
-		wait()
-		zeezy.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")	
-	end
-end
-
-
---[[ Binds ]]--
-
-ca:BindAction("zeezyFrontflip",zeezyFrontflip,false,FrontflipKey)
-ca:BindAction("zeezyBackflip",zeezyBackflip,false,BackflipKey)
-ca:BindAction("zeezyAirjump",zeezyAirjump,false,AirjumpKey)
-
---[[ Load Message ]]--
-
-print(scriptname .. " " .. ver .. " loaded successfully")
-print("made by godfather#0289")
-
-local notifSound = Instance.new("Sound",workspace)
-notifSound.PlaybackSpeed = 1.5
-notifSound.Volume = 0.15
-notifSound.SoundId = "rbxassetid://170765130"
-notifSound.PlayOnRemove = true
-notifSound:Destroy()
-game.StarterGui:SetCore("SendNotification", {Title = "FE Flip", Text = "Made By godfather#0289", Icon = "rbxassetid://505845268", Duration = 5, Button1 = "Okay"})
-
-	
 end)
 
 ScriptsTab:NewButton("Mouse Fling", "Click E to move the fling part", function()
@@ -183,97 +41,12 @@ ScriptsTab:NewButton("Soccer Ball", "Puts any 6 hats into a working soccer ball!
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Soccer%20Ball"))()
 end)
 
-ScriptsTab:NewButton("Mech Hub", "Check Discord For Hats Required", function()
-	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Mech%20Hub"))()
-end)
-
-ScriptsTab:NewButton("PP", "Gives you a massive long schlong dong", function()
-	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/PP"))()
-end)
-
-ScriptsTab:NewButton("Marble", "The effect of you rolling around is FE but the marble isn't", function()
+ScriptsTab:NewButton("Human-Wheel", "Use if you want to be disabled", function()
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Marble"))()
-end)
-
-ScriptsTab:NewButton("Pet Hub", "Hats needed in discord", function()
-	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Pet%20Hub"))()
-end)
-
-ScriptsTab:NewButton("Hoverboard", "Hats needed in discord", function()
-	loadstring(game:GetObjects('rbxassetid://7339698872')[1].Source)()
-end)
-
-ScriptsTab:NewButton("Slenderman", "FE Tall Script", function()
-	
-	local LocalPlayer = game:GetService("Players").LocalPlayer
-local Character = LocalPlayer.Character
-local Humanoid = Character:FindFirstChildOfClass("Humanoid")
-
-function rm()
-	for i,v in pairs(Character:GetDescendants()) do
-		if v:IsA("BasePart") then
-			if v.Name == "Handle" or v.Name == "Head" then
-				if Character.Head:FindFirstChild("OriginalSize") then
-					Character.Head.OriginalSize:Destroy()
-				end
-			else
-				for i,cav in pairs(v:GetDescendants()) do
-					if cav:IsA("Attachment") then
-						if cav:FindFirstChild("OriginalPosition") then
-							cav.OriginalPosition:Destroy()  
-						end
-					end
-				end
-				v:FindFirstChild("OriginalSize"):Destroy()
-				if v:FindFirstChild("AvatarPartScaleType") then
-					v:FindFirstChild("AvatarPartScaleType"):Destroy()
-				end
-			end
-		end
-	end
-end
-
-rm()
-wait(0.5)
-Humanoid:FindFirstChild("BodyProportionScale"):Destroy()
-wait(1)
-
-rm()
-wait(0.5)
-Humanoid:FindFirstChild("BodyHeightScale"):Destroy()
-wait(1)
-
-rm()
-wait(0.5)
-Humanoid:FindFirstChild("BodyWidthScale"):Destroy()
-wait(1)
-
-rm()
-wait(0.5)
-Humanoid:FindFirstChild("BodyDepthScale"):Destroy()
-wait(1)
-
-rm()
-wait(0.5)
-Humanoid:FindFirstChild("HeadScale"):Destroy()
-wait(1)
-	
-end)
-
-ScriptsTab:NewButton("Smile", "So you can show people you aren't a depressed emo", function()
-	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Smile"))()
-end)
-
-ScriptsTab:NewButton("Stilts", "FE Stilts, hats in discord", function()
-	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Stilts"))()
 end)
 
 ScriptsTab:NewButton("Skateboard", "Working FE Skateboard, hat in discord", function()
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Skateboard"))()
-end)
-
-ScriptsTab:NewButton("Neko", "For if you want to be a discord kitten", function()
-	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Neko"))()
 end)
 
 ScriptsTab:NewButton("FE Smallify", "Requires 90 height, 70 width, 100 head, 100 proportions", function()
@@ -339,11 +112,11 @@ CreditsTab:NewLabel("UI was made by MotionTaken#3117")
 
 CreditsTab:NewButton("\67\111\112\121\32\68\105\115\99\111\114\100\32\73\110\118\105\116\101", "\67\111\112\105\101\115\32\116\104\101\32\105\110\118\105\116\101\46.", function()
 	if setclipboard then
-		setclipboard("https://discord.gg/WG6pgUjJrH")
+		setclipboard("https://discord.gg/H9BtRx9kc7")
 	end
 end)
 
--- Shift + Q Hides Gui
+-- Hide GUI
 
 local Enabled = true
 UserInputService.InputBegan:Connect(function(Input,Typing)

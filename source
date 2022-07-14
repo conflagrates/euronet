@@ -142,7 +142,7 @@ return {
 		Title.Size = UDim2.new(0, 402, 0, 15)
 		Title.Font = Enum.Font.LuckiestGuy
 		Title.Text = GuiName
-		Title.TextColor3 = Color3.fromRGB(200, 200, 200)
+		Title.TextColor3 = Color3.fromRGB(0, 0, 0)
 		Title.TextSize = 16.000
 		Title.TextXAlignment = Enum.TextXAlignment.Left
 		Title.TextYAlignment = Enum.TextYAlignment.Top

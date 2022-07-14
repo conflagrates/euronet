@@ -1,0 +1,768 @@
+if not game:IsLoaded() then
+	game.Loaded:Wait()
+end
+
+
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Razzer35/a/main/Razzer%20Hub%20Source"))()
+
+local Pendulum = Library.CreateLib("69 hub ;)))")
+local UserInputService = game:GetService("UserInputService")
+
+local ScriptsTab = Pendulum:NewTab("Scripts",false)
+local CreditsTab = Pendulum:NewTab("Credits",true)
+local AnimationIdPlayer = Pendulum:NewTab("Animation Player",false)
+
+
+local Players = game:GetService("Players")
+
+
+
+-- Animation ID Player
+
+AnimationIdPlayer:NewButton("Animation ID Player", "If you have trouble using it join the discord.", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Tescalus/Evolution-Hub/main/Animation%20ID%20Player.lua"))()
+end)
+
+-- Script Buttons
+
+ScriptsTab:NewButton("Fire God", "Requires Fiery Fox Shoulder Pal", function()
+	loadstring(game:HttpGetAsync("https://pastebin.com/raw/D7pigANg"))()
+end)
+
+ScriptsTab:NewButton("Amogus", "you are a ni-", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/amogus"))()
+end)
+
+ScriptsTab:NewButton("Assault Rifle", "For military needs", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/AR-15"))()
+end)
+
+ScriptsTab:NewButton("UFO", "Area 69 ;)", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/UFO"))()
+end)
+
+ScriptsTab:NewButton("Creepy Crawler", "Spiderman?!?", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Creepy%20Crawler"))()
+end)
+
+ScriptsTab:NewButton("R6 Kazotsky Kick", "R6 for ppl with a third leg", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Kazotsky%20Kick"))()
+end)
+
+ScriptsTab:NewButton("R15 Kazotsky Kick", "R15 for ppl with a third leg", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/R15%20Kazotsky%20Kick"))()
+end)
+
+ScriptsTab:NewButton("Gravity Gun", "Creds to MastersMZ", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Gravity%20Gun"))()
+end)
+
+ScriptsTab:NewButton("Neck Snap", "For comedy purposes", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Neck%20Snap"))()
+end)
+
+ScriptsTab:NewButton("Guts", "Flings on touch and on swing!", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Guts"))()
+end)
+
+ScriptsTab:NewButton("Dog", "Pet dog that follows you around", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Dog"))()
+end)
+
+ScriptsTab:NewButton("Pet Head", "Opens a GUI that allows you to use your head to follow and annoy people", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Pet%20Head"))()
+end)
+
+ScriptsTab:NewButton("Big Head R15", "Makes your rthro head become gigantic", function()
+
+for i,v in pairs(game.Players.LocalPlayer.Character.Humanoid:GetChildren()) do
+   if string.find(v.Name,"Scale") and v.Name ~= "HeadScale" then
+       repeat wait(HeadGrowSpeed) until game.Players.LocalPlayer.Character.Head:FindFirstChild("OriginalSize")
+       game.Players.LocalPlayer.Character.Head.OriginalSize:Destroy()
+       v:Destroy()
+       game.Players.LocalPlayer.Character.Head:WaitForChild("OriginalSize")
+       
+   end
+end
+end)
+
+ScriptsTab:NewButton("Creeper", "FE Minecraft Creeper", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Creeper"))()
+end)
+
+ScriptsTab:NewButton("Neko", "*notices your bulge*", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Neko"))()
+end)
+
+ScriptsTab:NewButton("Flip", "Z - Frontflip, X - Backflip, C - Infinite Jump", function()
+	
+	wait(2)
+
+--[[ Info ]]--
+
+local ver = "2.00"
+local scriptname = "Flip"
+
+
+--[[ Keybinds ]]--
+
+local FrontflipKey = Enum.KeyCode.Z
+local BackflipKey = Enum.KeyCode.X
+local AirjumpKey = Enum.KeyCode.C
+
+
+--[[ Dependencies ]]--
+
+local ca = game:GetService("ContextActionService")
+local zeezy = game:GetService("Players").LocalPlayer
+local h = 0.0174533
+local antigrav
+
+
+--[[ Functions ]]--
+
+function zeezyFrontflip(act,inp,obj)
+	if inp == Enum.UserInputState.Begin then
+		zeezy.Character.Humanoid:ChangeState("Jumping")
+		wait()
+		zeezy.Character.Humanoid.Sit = true
+		for i = 1,360 do 
+			delay(i/720,function()
+			zeezy.Character.Humanoid.Sit = true
+				zeezy.Character.HumanoidRootPart.CFrame = zeezy.Character.HumanoidRootPart.CFrame * CFrame.Angles(-h,0,0)
+			end)
+		end
+		wait(0.55)
+		zeezy.Character.Humanoid.Sit = false
+	end
+end
+
+function zeezyBackflip(act,inp,obj)
+	if inp == Enum.UserInputState.Begin then
+		zeezy.Character.Humanoid:ChangeState("Jumping")
+		wait()
+		zeezy.Character.Humanoid.Sit = true
+		for i = 1,360 do
+			delay(i/720,function()
+			zeezy.Character.Humanoid.Sit = true
+				zeezy.Character.HumanoidRootPart.CFrame = zeezy.Character.HumanoidRootPart.CFrame * CFrame.Angles(h,0,0)
+			end)
+		end
+		wait(0.55)
+		zeezy.Character.Humanoid.Sit = false
+	end
+end
+
+function zeezyAirjump(act,inp,obj)
+	if inp == Enum.UserInputState.Begin then
+		zeezy.Character:FindFirstChildOfClass'Humanoid':ChangeState("Seated")
+		wait()
+		zeezy.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")	
+	end
+end
+
+
+--[[ Binds ]]--
+
+ca:BindAction("zeezyFrontflip",zeezyFrontflip,false,FrontflipKey)
+ca:BindAction("zeezyBackflip",zeezyBackflip,false,BackflipKey)
+ca:BindAction("zeezyAirjump",zeezyAirjump,false,AirjumpKey)
+
+--[[ Load Message ]]--
+
+print(scriptname .. " " .. ver .. " loaded successfully")
+print("made by godfather#0289")
+
+local notifSound = Instance.new("Sound",workspace)
+notifSound.PlaybackSpeed = 1.5
+notifSound.Volume = 0.15
+notifSound.SoundId = "rbxassetid://170765130"
+notifSound.PlayOnRemove = true
+notifSound:Destroy()
+game.StarterGui:SetCore("SendNotification", {Title = "FE Flip", Text = "Made By godfather#0289", Icon = "rbxassetid://505845268", Duration = 5, Button1 = "Okay"})
+
+	
+end)
+
+ScriptsTab:NewButton("Mouse Fling", "Click E to move the fling part", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Mouse%20Fling"))()
+end)
+
+ScriptsTab:NewButton("Soccer Ball", "Puts any 6 hats into a working soccer ball!", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Soccer%20Ball"))()
+end)
+
+ScriptsTab:NewButton("Mech Hub", "Check Discord For Hats Required", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Mech%20Hub"))()
+end)
+
+ScriptsTab:NewButton("PP", "Gives you a massive long schlong dong", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/PP"))()
+end)
+
+ScriptsTab:NewButton("Marble", "The effect of you rolling around is FE but the marble isn't", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Marble"))()
+end)
+
+ScriptsTab:NewButton("Pet Hub", "Hats needed in discord", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Pet%20Hub"))()
+end)
+
+ScriptsTab:NewButton("Hoverboard", "Hats needed in discord", function()
+	loadstring(game:GetObjects('rbxassetid://7339698872')[1].Source)()
+end)
+
+ScriptsTab:NewButton("Slenderman", "FE Tall Script", function()
+	
+	local LocalPlayer = game:GetService("Players").LocalPlayer
+local Character = LocalPlayer.Character
+local Humanoid = Character:FindFirstChildOfClass("Humanoid")
+
+function rm()
+	for i,v in pairs(Character:GetDescendants()) do
+		if v:IsA("BasePart") then
+			if v.Name == "Handle" or v.Name == "Head" then
+				if Character.Head:FindFirstChild("OriginalSize") then
+					Character.Head.OriginalSize:Destroy()
+				end
+			else
+				for i,cav in pairs(v:GetDescendants()) do
+					if cav:IsA("Attachment") then
+						if cav:FindFirstChild("OriginalPosition") then
+							cav.OriginalPosition:Destroy()  
+						end
+					end
+				end
+				v:FindFirstChild("OriginalSize"):Destroy()
+				if v:FindFirstChild("AvatarPartScaleType") then
+					v:FindFirstChild("AvatarPartScaleType"):Destroy()
+				end
+			end
+		end
+	end
+end
+
+rm()
+wait(0.5)
+Humanoid:FindFirstChild("BodyProportionScale"):Destroy()
+wait(1)
+
+rm()
+wait(0.5)
+Humanoid:FindFirstChild("BodyHeightScale"):Destroy()
+wait(1)
+
+rm()
+wait(0.5)
+Humanoid:FindFirstChild("BodyWidthScale"):Destroy()
+wait(1)
+
+rm()
+wait(0.5)
+Humanoid:FindFirstChild("BodyDepthScale"):Destroy()
+wait(1)
+
+rm()
+wait(0.5)
+Humanoid:FindFirstChild("HeadScale"):Destroy()
+wait(1)
+	
+end)
+
+ScriptsTab:NewButton("Smile", "So you can show people you aren't a depressed emo", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Smile"))()
+end)
+
+ScriptsTab:NewButton("Stilts", "FE Stilts, hats in discord", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Stilts"))()
+end)
+
+ScriptsTab:NewButton("Wall", "Turns your avatar into a wall", function()
+	
+local runservice=game:service"RunService";
+local player=game:service"Players"["LocalPlayer"];
+local character=player["Character"];
+--character["Head"]:FindFirstChildOfClass"SpecialMesh":Destroy();
+character["Humanoid"].HipHeight=-2;
+wait(1)
+
+local plr = game.Players.LocalPlayer
+game:GetService("RunService").Stepped:Connect(function()
+   setsimulationradius(9e9,9e9)
+   plr.ReplicationFocus = workspace
+   settings().Physics.AllowSleep = false
+end)
+
+
+
+
+--Keybinds
+_G.UnReanimateKey = "q" --The keybind for unreanimating.
+_G.ReanimateKey = "e" --The keybind for reanimating.
+_G.R6ToggleKey = "r" --The keybind for toggling R15 to R6.
+_G.GodmodeToggleKey = "t" --The keybind for toggling godmode.
+--Options
+_G.FastLoading = true --Set to true if you want godmode to load faster. (Experimental)
+_G.CharacterBug = false --Set to true if your uppertorso floats when using godmode with R15.
+_G.GodMode = true --Set to true if you want godmode.
+if game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid").RigType == Enum.HumanoidRigType.R15 then
+    _G.R6 = true --Set to true if you wanna enable R15 to R6 when your R15.
+else
+    _G.R6 = false --Set to true if you wanna enable R15 to R6 when your R15.
+end
+_G.AutoReanimate = true --Set to true if you want to auto reanimate and disable keybinds after executing.
+
+loadstring(game:HttpGet("https://paste.ee/r/5K7Kc/0"))()
+
+repeat wait() until _G.MSG ~= nil
+repeat wait() until _G.MSG.Text == ""
+wait(0.5)
+
+local client = game:GetService("Players").LocalPlayer
+local char = client.Character
+local nullware = char.NullwareReanim
+local neck = nullware.Torso.Neck
+
+if char.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+    neck.C0 = neck.C0 + Vector3.new(0,-1.001, 0.01)
+    char.Head:FindFirstChildOfClass("Decal"):Destroy()
+    char.Head:FindFirstChildOfClass("SpecialMesh"):Destroy()
+    for i, v in pairs(nullware:GetChildren()) do
+        if v:IsA('Accessory') then
+            local handle = v.Handle
+            if handle:FindFirstChild("HatAttachment") or handle:FindFirstChild("HairAttachment") or handle:FindFirstChild("FaceCenterAttachment") then
+                local weld = v.Handle.AccessoryWeld
+                weld.C0 = weld.C0 + Vector3.new(0,-1,0)
+            end
+        end
+    end
+    char.Head.AlignPosition:Destroy()
+    char.Head.AlignOrientation:Destroy()
+    local function weldpart(part0, part1)
+        local att0 = Instance.new("Attachment", part0)
+        att0.Position = Vector3.new(0, -0.49, -0.01) --change the position to position it customly
+        att0.Rotation = Vector3.new(0, 0, 0) --change the rotation to rotate it customly (mostly used for anims as i know)
+        local att1 = Instance.new("Attachment", part1)
+        att1.Position = Vector3.new(0,0,0)
+        local AP = Instance.new("AlignPosition", part0)
+        AP.Attachment0 = att0
+        AP.Attachment1 = att1
+        AP.RigidityEnabled = false
+        AP.ReactionForceEnabled = false
+        AP.ApplyAtCenterOfMass = false
+        AP.MaxForce = 9999999
+        AP.MaxVelocity = math.huge
+        AP.Responsiveness = 2000
+        local AO = Instance.new("AlignOrientation", part0)
+        AO.Attachment0 = att0
+        AO.Attachment1 = att1
+        AO.ReactionTorqueEnabled = true
+        AO.PrimaryAxisOnly = false
+        AO.MaxTorque = 9999999
+        AO.MaxAngularVelocity = math.huge
+        AO.Responsiveness = 2000
+    end
+    
+    weldpart(char.Head, nullware.Torso)
+else
+    neck.C0 = neck.C0 + Vector3.new(0,-1.001, 0.01)
+    char.Head:FindFirstChildOfClass("Decal"):Destroy()
+    char.Head:FindFirstChildOfClass("SpecialMesh"):Destroy()
+    for i, v in pairs(nullware:GetChildren()) do
+        if v:IsA('Accessory') then
+            local handle = v.Handle
+            if handle:FindFirstChild("HatAttachment") or handle:FindFirstChild("HairAttachment") or handle:FindFirstChild("FaceCenterAttachment") then
+                local weld = v.Handle.AccessoryWeld
+                weld.C0 = weld.C0 + Vector3.new(0,-1,0)
+            end
+        end
+    end
+    char.Head.AlignPosition:Destroy()
+    char.Head.AlignOrientation:Destroy()
+    local function weldpart(part0, part1)
+        local att0 = Instance.new("Attachment", part0)
+        att0.Position = Vector3.new(0, -0.19, -0.01) --change the position to position it customly
+        att0.Rotation = Vector3.new(0, 0, 0) --change the rotation to rotate it customly (mostly used for anims as i know)
+        local att1 = Instance.new("Attachment", part1)
+        att1.Position = Vector3.new(0,0,0)
+        local AP = Instance.new("AlignPosition", part0)
+        AP.Attachment0 = att0
+        AP.Attachment1 = att1
+        AP.RigidityEnabled = false
+        AP.ReactionForceEnabled = false
+        AP.ApplyAtCenterOfMass = false
+        AP.MaxForce = 9999999
+        AP.MaxVelocity = math.huge
+        AP.Responsiveness = 2000
+        local AO = Instance.new("AlignOrientation", part0)
+        AO.Attachment0 = att0
+        AO.Attachment1 = att1
+        AO.ReactionTorqueEnabled = true
+        AO.PrimaryAxisOnly = false
+        AO.MaxTorque = 9999999
+        AO.MaxAngularVelocity = math.huge
+        AO.Responsiveness = 2000
+    end
+    
+    weldpart(char.Head, nullware.Torso)
+end
+wait(3)
+
+local plr = game.Players.LocalPlayer
+game:GetService("RunService").Stepped:Connect(function()
+   setsimulationradius(9e9,9e9)
+   plr.ReplicationFocus = workspace
+   settings().Physics.AllowSleep = false
+end)
+
+local runservice=game:service"RunService";
+local player=game:service"Players"["LocalPlayer"];
+local character=player["Character"];
+--character["Head"]:FindFirstChildOfClass"SpecialMesh":Destroy();
+
+character["Humanoid"].HipHeight=-2;
+character["Left Leg"]:BreakJoints();
+character["Right Leg"]:BreakJoints();
+character["Left Arm"]:BreakJoints();
+character["Right Arm"]:BreakJoints();
+while runservice["Heartbeat"]:Wait() do
+    character["Left Leg"].CFrame=character["HumanoidRootPart"].CFrame*CFrame.new(1.5,0,-0);
+    character["Right Leg"].CFrame=character["HumanoidRootPart"].CFrame*CFrame.new(-1.5,0,-0);
+    character["Left Arm"].CFrame=character["HumanoidRootPart"].CFrame*CFrame.new(-2.5,0,-0);
+    character["Right Arm"].CFrame=character["HumanoidRootPart"].CFrame*CFrame.new(2.5,0,-0);
+end
+
+end)
+
+ScriptsTab:NewButton("Skateboard", "Working FE Skateboard, hat in discord", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Skateboard"))()
+end)
+
+ScriptsTab:NewButton("Neko", "For if you want to be a discord kitten", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Razzer35/a/main/Neko"))()
+end)
+
+ScriptsTab:NewButton("Meme Dance", "FE Meme Dance with click to fling", function()
+	HumanDied = false
+local reanim
+function noplsmesh(hat)
+_G.OldCF=workspace.Camera.CFrame
+oldchar=game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Character=workspace[game.Players.LocalPlayer.Name]
+for i,v in next, workspace[game.Players.LocalPlayer.Name][hat]:GetDescendants() do
+if v:IsA('Mesh') or v:IsA('SpecialMesh') then
+v:Remove()
+end
+end
+game.Players.LocalPlayer.Character=oldchar
+wait()
+workspace.Camera.CFrame=_G.OldCF
+game.Players.LocalPlayer.Character=oldchar
+end
+_G.ClickFling=false -- Set this to true if u want.
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/XeneonPlays/Nexo/main/NexoPD'),true))()
+
+IT = Instance.new
+CF = CFrame.new
+VT = Vector3.new
+RAD = math.rad
+C3 = Color3.new
+UD2 = UDim2.new
+BRICKC = BrickColor.new
+ANGLES = CFrame.Angles
+EULER = CFrame.fromEulerAnglesXYZ
+COS = math.cos
+ACOS = math.acos
+SIN = math.sin
+ASIN = math.asin
+ABS = math.abs
+MRANDOM = math.random
+FLOOR = math.floor
+
+speed = 1
+sine = 1
+srv = game:GetService('RunService')
+
+function hatset(yes,part,c1,c0,nm)
+reanim[yes].Handle.AccessoryWeld.Part1=reanim[part]
+reanim[yes].Handle.AccessoryWeld.C1=c1 or CFrame.new()
+reanim[yes].Handle.AccessoryWeld.C0=c0 or CFrame.new()--3bbb322dad5929d0d4f25adcebf30aa5
+if nm==true then
+noplsmesh(yes)
+end
+end
+
+--put the hat script converted below
+
+reanim = game.Players.LocalPlayer.Character.CWExtra.NexoPD
+RJ = reanim.HumanoidRootPart.RootJoint
+RS = reanim.Torso['Right Shoulder']
+LS = reanim.Torso['Left Shoulder']
+RH = reanim.Torso['Right Hip']
+LH = reanim.Torso['Left Hip']
+Root = reanim.HumanoidRootPart
+NECK = reanim.Torso.Neck
+NECK.C0 = CF(0,1,0)*ANGLES(RAD(0),RAD(0),RAD(0))
+NECK.C1 = CF(0,-0.5,0)*ANGLES(RAD(0),RAD(0),RAD(0))
+RJ.C1 = CF(0,0,0)*ANGLES(RAD(0),RAD(0),RAD(0))
+RJ.C0 = CF(0,0,0)*ANGLES(RAD(0),RAD(0),RAD(0))
+RS.C1 = CF(-0.5,0.5,0)*ANGLES(RAD(0),RAD(0),RAD(0))
+LS.C1 = CF(0.5,0.5,0)*ANGLES(RAD(0),RAD(0),RAD(0))
+RH.C1 = CF(0,1,0)*ANGLES(RAD(0),RAD(0),RAD(0))
+LH.C1 = CF(0,1,0)*ANGLES(RAD(0),RAD(0),RAD(0))
+RH.C0 = CF(0,0,0)*ANGLES(RAD(0),RAD(0),RAD(0))
+LH.C0 = CF(0,0,0)*ANGLES(RAD(0),RAD(0),RAD(0))
+RS.C0 = CF(0,0,0)*ANGLES(RAD(0),RAD(0),RAD(0))
+LS.C0 = CF(0,0,0)*ANGLES(RAD(0),RAD(0),RAD(0))
+
+Mode='1'
+
+mousechanger=game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(k)
+if k == 'urkeybind' then-- first mode
+Mode='1'
+elseif k == 'urkeybind' then-- second mode
+Mode='2'
+elseif k == 'urkeybind' then-- third mode
+Mode='3'
+end
+end)
+
+coroutine.wrap(function()
+while true do -- anim changer
+if HumanDied then mousechanger:Disconnect() break end
+sine = sine + speed
+local rlegray = Ray.new(reanim["Right Leg"].Position + Vector3.new(0, 0.5, 0), Vector3.new(0, -2, 0))
+local rlegpart, rlegendPoint = workspace:FindPartOnRay(rlegray, char)
+local llegray = Ray.new(reanim["Left Leg"].Position + Vector3.new(0, 0.5, 0), Vector3.new(0, -2, 0))
+local llegpart, llegendPoint = workspace:FindPartOnRay(llegray, char)
+local rightvector = (Root.Velocity * Root.CFrame.rightVector).X + (Root.Velocity * Root.CFrame.rightVector).Z
+local lookvector = (Root.Velocity * Root.CFrame.lookVector).X + (Root.Velocity * Root.CFrame.lookVector).Z
+if lookvector > reanim.Humanoid.WalkSpeed then
+lookvector = reanim.Humanoid.WalkSpeed
+end
+if lookvector < -reanim.Humanoid.WalkSpeed then
+lookvector = -reanim.Humanoid.WalkSpeed
+end
+if rightvector > reanim.Humanoid.WalkSpeed then
+rightvector = reanim.Humanoid.WalkSpeed
+end
+if rightvector < -reanim.Humanoid.WalkSpeed then
+rightvector = -reanim.Humanoid.WalkSpeed
+end
+local lookvel = lookvector / reanim.Humanoid.WalkSpeed
+local rightvel = rightvector / reanim.Humanoid.WalkSpeed
+if Mode == '1' then
+if Root.Velocity.y > 1 then -- jump
+--jump clerp here
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),0+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(1+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+elseif Root.Velocity.y < -1 then -- fall
+--fall clerp here
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),0+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(1+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+elseif Root.Velocity.Magnitude < 2 then -- idle
+--idle clerp here
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),0+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(1+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+elseif Root.Velocity.Magnitude < 20 then -- walk
+--walk clerp here
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),0+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(1+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+elseif Root.Velocity.Magnitude > 20 then -- run
+--run clerp here
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),0+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(1+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+end
+elseif Mode == '2' then
+if Root.Velocity.y > 1 then -- jump
+--jump clerp here
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),0+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(1+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+elseif Root.Velocity.y < -1 then -- fall
+--fall clerp here
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),0+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(1+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+elseif Root.Velocity.Magnitude < 2 then -- idle
+--idle clerp here
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),0+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(1+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+elseif Root.Velocity.Magnitude < 20 then -- walk
+--walk clerp here
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),0+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(1+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+elseif Root.Velocity.Magnitude > 20 then -- run
+--run clerp here
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),0+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(1+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+end
+elseif Mode == '3' then
+if Root.Velocity.y > 1 then -- jump
+--jump clerp here
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),0+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(1+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+elseif Root.Velocity.y < -1 then -- fall
+--fall clerp here
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),0+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(1+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+elseif Root.Velocity.Magnitude < 2 then -- idle
+--idle clerp here
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),0+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(1+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+elseif Root.Velocity.Magnitude < 20 then -- walk
+--walk clerp here
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),0+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(1+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+elseif Root.Velocity.Magnitude > 20 then -- run
+--run clerp here
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),0+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(1+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13)),RAD(0+360*math.cos(sine/13))),.3)
+end
+end
+srv.RenderStepped:Wait()
+end
+end)()
+--Created using Nexo Animator
+end)
+
+ScriptsTab:NewButton("FE Smallify", "Requires 90 height, 70 width, 100 head, 100 proportions", function()
+	--[[simple script made by failedmite57926
+Character settings:
+Body Type - 0%
+Height - 90%
+Width - 70%
+Head - 100%
+Proportions - 100%
+]]--
+
+local LocalPlayer = game:GetService("Players").LocalPlayer
+local Character = LocalPlayer.Character
+local Humanoid = Character:FindFirstChildOfClass("Humanoid")
+
+local function rm()
+	for i,v in pairs(Character:GetDescendants()) do
+		if v:IsA("BasePart") then
+			if v.Name ~= "Head" then
+				for i,cav in pairs(v:GetDescendants()) do
+					if cav:IsA("Attachment") then
+						if cav:FindFirstChild("OriginalPosition") then
+							cav.OriginalPosition:Destroy()
+						end
+					end
+				end
+				v:FindFirstChild("OriginalSize"):Destroy()
+				if v:FindFirstChild("AvatarPartScaleType") then
+					v:FindFirstChild("AvatarPartScaleType"):Destroy()
+				end
+			end
+		end
+	end
+end
+
+rm()
+wait(0.5)
+Humanoid:FindFirstChild("BodyTypeScale"):Destroy()
+wait(0.2)
+
+rm()
+wait(0.5)
+Humanoid:FindFirstChild("BodyWidthScale"):Destroy()
+wait(0.2)
+
+rm()
+wait(0.5)
+Humanoid:FindFirstChild("BodyDepthScale"):Destroy()
+wait(0.2)
+
+rm()
+wait(0.5)
+Humanoid:FindFirstChild("HeadScale"):Destroy()
+wait(0.2)
+end)
+-- Credits
+
+CreditsTab:NewLabel("Credits to godfather#0289 for making the entire hub")
+CreditsTab:NewLabel("Ty marner.szn_#1554 for reanimation")
+CreditsTab:NewLabel("UI was made by MotionTaken#3117")
+
+
+CreditsTab:NewButton("\67\111\112\121\32\68\105\115\99\111\114\100\32\73\110\118\105\116\101", "\67\111\112\105\101\115\32\116\104\101\32\105\110\118\105\116\101\46.", function()
+	if setclipboard then
+		setclipboard("https://discord.gg/WG6pgUjJrH")
+	end
+end)
+
+-- Shift + Q Hides Gui
+
+local Enabled = true
+UserInputService.InputBegan:Connect(function(Input,Typing)
+	if Input.KeyCode == Enum.KeyCode.Q and not Typing and UserInputService:IsKeyDown(Enum.KeyCode.LeftShift) then
+		Enabled = not Enabled
+		
+		if Enabled == false then
+			Pendulum:Hide()
+		elseif Enabled == true then
+			Pendulum:Show()
+		end
+	end
+end)

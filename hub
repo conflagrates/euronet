@@ -10,7 +10,7 @@ local euronet = Library.CreateLib("euronet")
 local UserInputService = game:GetService("UserInputService")
 
 local ScriptsTab = euronet:NewTab("Scripts",false)
-local CreditsTab = euronet:NewTab("Credits",true)
+local DiscordTab = euronet:NewTab("Credits",true)
 
 local Players = game:GetService("Players")
 

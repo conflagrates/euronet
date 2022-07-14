@@ -6,13 +6,11 @@ end
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/euronetic/euronet/main/source"))()
 
-local Pendulum = Library.CreateLib("euronetic")
+local euronet = Library.CreateLib("euronetic")
 local UserInputService = game:GetService("UserInputService")
 
-local ScriptsTab = Pendulum:NewTab("Scripts",false)
-local CreditsTab = Pendulum:NewTab("Credits",true)
-local AnimationIdPlayer = Pendulum:NewTab("Animation Player",false)
-
+local ScriptsTab = euronet:NewTab("Scripts",false)
+local CreditsTab = euronet:NewTab("Credits",true)
 
 local Players = game:GetService("Players")
 
@@ -760,9 +758,9 @@ UserInputService.InputBegan:Connect(function(Input,Typing)
 		Enabled = not Enabled
 		
 		if Enabled == false then
-			Pendulum:Hide()
+			euronet:Hide()
 		elseif Enabled == true then
-			Pendulum:Show()
+			euronet:Show()
 		end
 	end
 end)

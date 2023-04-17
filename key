@@ -1,0 +1,37 @@
+
+local pn = game:GetService("Players").LocalPlayer.Name
+if pn ~= "oofoofvy" or "vforversace" or "highideals" or "Pregante_at3years" or "pregnantattheageof5" or "A_TruthfulMemory" then
+local req = (syn and syn.request) or (http and http.request) or http_request
+local key_Skeet = _G.key
+    local response = req({
+        Url = 'http://mana42138.pythonanywhere.com/use_key',
+        Method = 'POST',
+        Headers = {
+            ['Content-Type'] = 'application/json'
+        },
+        Body = game:GetService('HttpService'):JSONEncode({
+            key=key_Skeet
+        })
+    })
+
+local responsedata = game:GetService('HttpService'):JSONDecode(response.Body)
+
+table.foreach(responsedata, print)
+
+if responsedata["success"] then
+    -- // Error
+    print("success", 200)
+    -- // Load the script
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Yorsu/key/main/responsedata"))()
+else
+    -- // Error
+    print("Error", 404)
+    -- // Discord
+    setclipboard("discord.gg/hB6m58kUMt")
+    -- // Kick Message
+    local plr = game:GetService("Players").LocalPlayer
+    plr:Kick("check your clipboard or get a new key")
+end
+end
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Yorsu/key/main/responsedata"))()
